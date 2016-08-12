@@ -8,6 +8,8 @@
 #ifndef CHARACTER_HPP_
 #define CHARACTER_HPP_
 
+#include <string>
+
 class Character {
 protected:
 	int health;
@@ -18,6 +20,12 @@ protected:
 public:
 	Character();
 	virtual ~Character();
+
+	virtual std::string name() const = 0;
+	virtual std::string type() const = 0;
+	virtual std::string action() = 0;
+	//virtual std::string pick(const Item& item) const = 0;
+	//virtual std::string drop(const Item& item) const = 0;
 
 
 };

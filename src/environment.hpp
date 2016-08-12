@@ -11,6 +11,8 @@
 #ifndef ENVIRONMENT_HPP_
 #define ENVIRONMENT_HPP_
 
+#include <string>
+
 class Environment {
 	//vector with neighbors? static linked list?
 
@@ -18,7 +20,7 @@ public:
 	Environment();
 	virtual ~Environment();
 
-	std::string location() = 0; //return name of location
+	virtual std::string location() const = 0; //return name of location
 };
 
 
